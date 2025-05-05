@@ -1,0 +1,253 @@
+/* === Global Styles === */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;  /* Центрируем элементы по горизонтали */
+  align-items: center;  /* Центрируем по вертикали */
+  height: 100vh;  /* Высота на весь экран */
+  flex-direction: column;
+}
+
+/* === MAIN CONTAINER === */
+.container {
+  display: flex;
+  gap: 20px;  /* Расстояние между блоками */
+  width: 100%;
+  max-width: 1200px;  /* Максимальная ширина контейнера */
+  justify-content: center; /* Центрируем все элементы по горизонтали */
+}
+
+/* === FORM & GENERAL ELEMENTS === */
+.form, .preview {
+  flex: 1 1 350px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  max-width: 500px;  /* Ограничиваем максимальную ширину блоков */
+  box-sizing: border-box;
+}
+
+h2, h3 {
+  margin-top: 0;
+  color: #222;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+input, textarea {
+  background: #f9f9f9;
+  color: #222;
+  border: 1px solid #ccc;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #888;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+button {
+  background-color: #229ed9;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s ease-in-out;
+}
+
+/* === TELEGRAM STYLE PREVIEW ONLY === */
+.preview {
+  background: #ffffff;
+  border: 1px solid #ccc;
+}
+
+.autotask {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.autotask label {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+
+.bot-media {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 10px;
+  border-top: 1px solid #444; /* Можно убрать, если не нужен визуальный разделитель */
+}
+
+.bot-media img {
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #444;
+}
+
+
+
+/* === Telegram Message Box === */
+.message-box {
+  background: url('telegram-bg-dark.png') repeat;
+  background-color: #262d31;
+  border-radius: 12px;
+  padding: 12px;
+  border: 1px solid #2e383f;
+  max-width: 360px;
+  font-family: "Segoe UI", sans-serif;
+  position: relative;
+  margin-top: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.task-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.task-buttons button {
+  flex: 1;
+  padding: 8px 12px;
+  background-color: #e0e0e0;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: bold;
+}
+
+.task-buttons button.active {
+  background-color: #229ed9;
+  color: white;
+  border-color: #1b8ec7;
+}
+
+.build-btn {
+  background-color: #4CAF50; /* Зеленый фон */
+  color: white; /* Белый текст */
+  border: none;
+  padding: 15px 32px; /* Размер кнопки */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px; /* Скругленные углы */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Плавные переходы */
+  margin-top: 20px; /* Отступ сверху */
+  width: 100%; /* Ширина кнопки 100% */
+  box-sizing: border-box;
+}
+
+/* Эффект при наведении */
+.build-btn:hover {
+  background-color: #45a049; /* Темный зеленый при наведении */
+  transform: scale(1.05); /* Увеличение размера кнопки */
+}
+
+.bot-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+
+  .bot-media {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.bot-media img {
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #444;
+}
+
+}
+
+.bot-header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.bot-header strong {
+  font-weight: 600;
+  font-size: 15px;
+  color: #aad8ff;
+}
+
+#messagePreview {
+  background-color: #1e2428;
+  border: 1px solid #3a444a;
+  border-radius: 10px;
+  color: #eaeaea;
+  padding: 12px;
+  white-space: pre-wrap;
+  font-size: 14px;
+  margin-top: 24px;
+}
+
+/* === DICTIONARY === */
+.dictionary {
+  margin-top: 30px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.dictionary h3 {
+  margin-top: 0;
+  font-size: 16px;
+  color: #222;
+}
+
+.dictionary ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.dictionary li {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #333;
+}
+
+.dictionary code {
+  background-color: #eef3f9;
+  color: #005999;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+}
